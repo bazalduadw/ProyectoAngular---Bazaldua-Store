@@ -1,20 +1,2 @@
-<h1>{{titulo}}</h1>
+<router-outlet></router-outlet>
 
-<button (click)="addItem()" >Agregar Producto</button>
-
-<ul>
-  <li *ngIf="items.length===0" >No hay productos, agrega uno!</li>
-  <li *ngFor="let item of items; index as i"  >
-     {{item + i}}
-     <button (click)="deleteItem(i)" >delete</button>
-  </li>
-</ul>
-
-<div class="contenedor-productos" style="display: flex; justify-content: space-evenly; width: 1000px; margin: 0 auto; flex-wrap: wrap;">
-  <div *ngFor="let producto of products" style="padding: 20px; border: 1px solid black; width: 300px">
-    {{producto.title}}
-    <br>
-    {{producto.price}}
-    <img [src]="producto.image" alt="" width="300px">
-  </div>
-</div>
